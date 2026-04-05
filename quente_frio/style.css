@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+/* Scrollbar retro */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d4d0c8;
+    border-left: 2px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border: 4px outset #dfdfdf;
+}
+
+::-webkit-scrollbar-thumb:active {
+    border: 4px inset #a0a0a0;
+}
+
 body {
     background: linear-gradient(135deg, #0a0f1e, #1a1f2e);
     font-family: 'Courier New', 'Lucida Console', monospace;
@@ -14,6 +33,33 @@ body {
     padding: 20px;
 }
 
+/* =================== TOP NAV BAR =================== */
+.nav-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1100px;
+    max-width: 98%;
+    background: linear-gradient(180deg, #1a1a2e, #0a0a14);
+    color: #888;
+    text-decoration: none;
+    font-family: 'Impact', 'Courier New', monospace;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border: 3px outset #333;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+}
+
+.nav-top-bar:hover {
+    background: linear-gradient(180deg, #2a2a3e, #1a1a24);
+    color: #ffcc00;
+    border-color: #ffaa00;
+}
+
+/* =================== GAME CONTAINER =================== */
 .game-container {
     width: 1100px;
     max-width: 98%;
@@ -23,10 +69,7 @@ body {
     padding: 0;
 }
 
-.ranking-container {
-    width: 900px;
-}
-
+/* =================== HEADER =================== */
 .header {
     background: linear-gradient(135deg, #ff3300, #ffcc00, #ff3300);
     padding: 20px;
@@ -49,6 +92,7 @@ body {
     font-weight: bold;
 }
 
+/* =================== CATEGORIA INFO =================== */
 .categoria-info {
     background: #2a2a2a;
     margin: 15px 20px 0 20px;
@@ -73,6 +117,7 @@ body {
     display: inline-block;
 }
 
+/* =================== PALPITE AREA =================== */
 .palpite-area {
     background: #d4d0c8;
     padding: 20px;
@@ -111,6 +156,11 @@ body {
     border: 4px solid #ff6600;
 }
 
+.input-group input::placeholder {
+    color: #999;
+    font-size: 16px;
+}
+
 .input-group button {
     flex: 1;
     background: #c0c0c0;
@@ -128,6 +178,7 @@ body {
     transform: translate(2px, 2px);
 }
 
+/* =================== ULTIMO CHUTE =================== */
 .ultimo-chute-msg {
     margin-top: 12px;
     padding: 10px;
@@ -157,6 +208,7 @@ body {
     font-size: 16px;
 }
 
+/* =================== ERROR =================== */
 .error-message {
     margin-top: 8px;
     padding: 8px;
@@ -172,6 +224,7 @@ body {
     display: block;
 }
 
+/* =================== FEEDBACK =================== */
 .feedback-panel {
     background: #000000;
     color: #0f0;
@@ -200,6 +253,7 @@ body {
     font-family: monospace;
 }
 
+/* =================== DICA =================== */
 .dica-area {
     background: #ffff99;
     border: 3px ridge #ff9900;
@@ -211,6 +265,7 @@ body {
     color: #663300;
 }
 
+/* =================== HISTORICO =================== */
 .historico-area {
     margin: 20px;
     background: #2a2a2a;
@@ -255,6 +310,7 @@ body {
     font-size: 16px;
 }
 
+/* =================== BOTOES =================== */
 .botoes-area {
     display: flex;
     gap: 15px;
@@ -283,6 +339,7 @@ body {
     transform: translate(3px, 3px);
 }
 
+/* =================== LEGENDA =================== */
 .legenda {
     background: #ffffcc;
     border-left: 8px solid #ff3300;
@@ -294,6 +351,7 @@ body {
     line-height: 1.6;
 }
 
+/* =================== FOOTER =================== */
 footer {
     background: #000000aa;
     text-align: center;
@@ -305,7 +363,7 @@ footer {
     margin-top: 10px;
 }
 
-/* Modal */
+/* =================== MODAL =================== */
 .modal {
     display: none;
     position: fixed;
@@ -380,7 +438,7 @@ footer {
     transform: translate(2px, 2px);
 }
 
-/* Ranking page */
+/* =================== RANKING PAGE =================== */
 .ranking-controls {
     display: flex;
     gap: 15px;
@@ -465,4 +523,137 @@ footer {
     text-align: center;
     font-weight: bold;
     border-left: 6px solid #cc0000;
+}
+
+/* =================== RESPONSIVO =================== */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    #tempIcon {
+        font-size: 40px;
+    }
+
+    .feedback-message {
+        font-size: 16px;
+    }
+
+    .historico-area h3 {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .tabela-historico {
+        font-size: 11px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input {
+        flex: 1;
+    }
+
+    .botoes-area {
+        flex-direction: column;
+    }
+
+    .modal-botoes {
+        flex-direction: column;
+    }
+
+    .ranking-controls {
+        flex-direction: column;
+    }
+
+    #btnVerRanking,
+    #btnCancelarRanking {
+        border: 5px outset #3399ff;
+    }
+
+    .tabela-ranking th:nth-child(3),
+    .tabela-ranking td:nth-child(3),
+    .tabela-historico th:nth-child(3),
+    .tabela-historico td:nth-child(3) {
+        display: none;
+    }
+
+    .nav-top-bar {
+        font-size: 13px;
+        letter-spacing: 2px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    .header {
+        padding: 14px 10px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .header p {
+        font-size: 11px;
+    }
+
+    .categoria-info {
+        margin: 10px 10px 0 10px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .palpite-area {
+        margin: 10px;
+        padding: 14px;
+    }
+
+    .input-group input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .feedback-panel {
+        margin: 0 10px 14px 10px;
+        padding: 14px;
+    }
+
+    .historico-area {
+        margin: 10px;
+    }
+
+    .dica-area {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .legenda {
+        margin: 10px;
+        font-size: 11px;
+    }
+
+    .botoes-area {
+        margin: 10px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .tabela-ranking {
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
 }

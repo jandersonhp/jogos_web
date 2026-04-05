@@ -287,16 +287,81 @@ body {
 }
 
 /* ================== RESPONSIVE ========================= */
+@media (max-width: 768px) {
+    .orb-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orb-2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 1.5rem;
+    }
+
+    .section {
+        padding: 3rem 1.25rem 4rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .games {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 480px) {
+    .hero {
+        min-height: 70vh;
+        padding: 1rem;
+    }
+
     .hero-content {
         padding: 0 0.5rem;
     }
 
+    .badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
     .section {
-        padding: 3rem 1rem 4rem;
+        padding: 2rem 1rem 3rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
     }
 
     .card {
         padding: 1.5rem;
+    }
+
+    .card-emoji {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    .bg-grid {
+        background-size: 32px 32px;
     }
 }

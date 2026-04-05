@@ -19,6 +19,8 @@ Coleção de jogos feitos com **HTML, CSS e JavaScript puro** para prática e es
 |------|-----------|--------|
 | [Quente ou Frio](https://jandersonhp.github.io/jogos_web/quente_frio/index.html) | Adivinhe o número secreto com dicas de quente/frio, categorias e letras | ![Concluído](https://img.shields.io/badge/Concluído-brightgreen) |
 
+🌐 **Landing page:** https://jandersonhp.github.io/jogos_web/
+
 ## Tecnologias
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26)
