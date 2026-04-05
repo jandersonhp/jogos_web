@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 RANKING - QUENTE & FRIO 🏆</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container ranking-container">
+        <div class="header">
+            <h1>🏆 RANKING GLOBAL 🏆</h1>
+            <p>★ MENOS TENTATIVAS = MELHOR POSIÇÃO ★</p>
+        </div>
+
+        <div class="ranking-controls">
+            <button id="btnAtualizarRanking">🔄 ATUALIZAR RANKING</button>
+            <button id="btnVoltarJogo">🎮 VOLTAR AO JOGO</button>
+        </div>
+
+        <div id="loadingRanking" class="loading-message">
+            ⏳ CARREGANDO RANKING...
+        </div>
+
+        <div id="rankingContent" style="display: none;">
+            <div class="ranking-stats">
+                <span id="totalJogadores"></span>
+            </div>
+            <table class="tabela-ranking" id="tabelaRanking">
+                <thead>
+                    <tr>
+                        <th>🏆 POSIÇÃO</th>
+                        <th>👤 NOME</th>
+                        <th>🎯 TENTATIVAS</th>
+                        <th>📅 DATA</th>
+                    </tr>
+                </thead>
+                <tbody id="rankingBody">
+                    <tr><td colspan="4" style="text-align:center;">-- NENHUM JOGADOR AINDA --</td</tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="erroRanking" class="erro-ranking" style="display: none;">
+            ⚠️ ERRO AO CARREGAR RANKING. Verifique sua conexão ou configure o Google Sheets.
+        </div>
+
+        <div class="legenda">
+            💡 O ranking é global! Quanto MENOS tentativas, melhor a posição.<br>
+            🔗 Os dados são salvos no Google Sheets.
+        </div>
+        <footer>
+            ⏣ HOT & COLD - RANKING GLOBAL ⏣
+        </footer>
+    </div>
+
+    <script src="rank.js"></script>
+</body>
+</html>

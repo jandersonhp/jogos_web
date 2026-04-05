@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade — Meus Jogos em JS</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='25' width='80' height='50' rx='25' fill='%236366f1'/%3E%3Ccircle cx='35' cy='50' r='6' fill='%23fff' opacity='.8'/%3E%3Ccircle cx='65' cy='50' r='6' fill='%23fff' opacity='.8'/%3E%3Ccircle cx='65' cy='38' r='2' fill='%23fff' opacity='.8'/%3E%3Ccircle cx='65' cy='62' r='2' fill='%23fff' opacity='.8'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Partículas de fundo -->
+    <div class="bg-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Hero -->
+    <header class="hero">
+        <nav class="nav">
+            <span class="logo">&#127918; Arcade</span>
+        </nav>
+        <div class="hero-content">
+            <span class="badge">Em desenvolvimento</span>
+            <h1>Jogos feitos pra<br>treinar <span class="highlight">JavaScript</span></h1>
+            <p class="subtitle">HTML, CSS e JS puro — sem frameworks, sem bibliotecas.</p>
+            <a class="btn-scroll" href="jogos">&#8595; Ver jogos</a>
+        </div>
+    </header>
+
+    <!-- Jogos -->
+    <main id="jogos" class="section">
+        <h2 class="section-title">Jogos</h2>
+        <div class="games">
+            <a class="card" href="quente_frio/index.html">
+                <div class="card-accent" style="--accent: #f59e0b;"></div>
+                <span class="card-emoji">&#127777;</span>
+                <h3>Quente ou Frio</h3>
+                <p>Adivinhe o número secreto com dicas de quente e frio, categorias e letras adicionais.</p>
+                <span class="card-tag">Jogar</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Projeto de estudos — sem frameworks, sem bibliotecas, s&oacute; o b&aacute;sico.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0f1e, #1a1f2e);
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    width: 1100px;
+    max-width: 98%;
+    background: #ece9d8;
+    border: 4px solid #0a0f1e;
+    box-shadow: 10px 10px 0px #00000066;
+    padding: 0;
+}
+
+.ranking-container {
+    width: 900px;
+}
+
+.header {
+    background: linear-gradient(135deg, #ff3300, #ffcc00, #ff3300);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ffffff88;
+}
+
+.header h1 {
+    font-size: 46px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #ffffaa;
+    text-shadow: 3px 3px 0px #000000aa;
+    font-family: 'Impact', 'Courier New', monospace;
+}
+
+.header p {
+    font-size: 14px;
+    color: #fff4cc;
+    font-weight: bold;
+}
+
+.categoria-info {
+    background: #2a2a2a;
+    margin: 15px 20px 0 20px;
+    padding: 12px;
+    border: 3px ridge #ffaa00;
+    text-align: center;
+    font-size: 18px;
+}
+
+.categoria-info .label {
+    color: #ffcc66;
+    font-weight: bold;
+}
+
+.categoria-info .valor {
+    color: #00ff00;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    background: #000;
+    padding: 4px 12px;
+    display: inline-block;
+}
+
+.palpite-area {
+    background: #d4d0c8;
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid #ffffff;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+}
+
+.palpite-label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+.input-group input {
+    flex: 3;
+    background: #fffff0;
+    border: 4px inset #808080;
+    padding: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+}
+
+.input-group input:focus {
+    background: #ffffaa;
+    border: 4px solid #ff6600;
+}
+
+.input-group button {
+    flex: 1;
+    background: #c0c0c0;
+    border: 4px outset #ffffff;
+    font-family: 'Impact', 'Courier New', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.input-group button:active {
+    border: 4px inset #808080;
+    transform: translate(2px, 2px);
+}
+
+.ultimo-chute-msg {
+    margin-top: 12px;
+    padding: 10px;
+    background: #e0e0e0;
+    border: 2px solid #808080;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: monospace;
+    text-align: center;
+    min-height: 50px;
+}
+
+.ultimo-chute-msg.quente {
+    background: #ffcc88;
+    border-left: 8px solid #ff6600;
+}
+
+.ultimo-chute-msg.frio {
+    background: #c0e0ff;
+    border-left: 8px solid #0066cc;
+}
+
+.ultimo-chute-msg.acertou {
+    background: #88ff88;
+    border-left: 8px solid #00aa00;
+    font-size: 16px;
+}
+
+.error-message {
+    margin-top: 8px;
+    padding: 8px;
+    background: #ffcccc;
+    border-left: 6px solid #cc0000;
+    color: #660000;
+    font-weight: bold;
+    font-size: 13px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.feedback-panel {
+    background: #000000;
+    color: #0f0;
+    padding: 20px;
+    margin: 0px 20px 20px 20px;
+    border: 4px ridge #ffcc00;
+    text-align: center;
+}
+
+#tempIcon {
+    font-size: 54px;
+    letter-spacing: 8px;
+}
+
+.feedback-message {
+    font-size: 20px;
+    color: #ffcc66;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.detalhes-temp {
+    font-size: 12px;
+    color: #88ff88;
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+.dica-area {
+    background: #ffff99;
+    border: 3px ridge #ff9900;
+    margin: 15px 20px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #663300;
+}
+
+.historico-area {
+    margin: 20px;
+    background: #2a2a2a;
+    border: 4px ridge #c0c0c0;
+    padding: 10px;
+}
+
+.historico-area h3 {
+    background: #000000;
+    color: #ffaa00;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 3px;
+    font-family: 'Impact', monospace;
+}
+
+.tabela-historico {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+.tabela-historico th {
+    background: #555555;
+    color: white;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 3px solid #ffaa00;
+}
+
+.tabela-historico td {
+    background: #1e1e1e;
+    color: #b0ffb0;
+    padding: 6px 8px;
+    border-bottom: 1px dotted #ffaa55;
+}
+
+.temp-icone {
+    font-size: 16px;
+}
+
+.botoes-area {
+    display: flex;
+    gap: 15px;
+    margin: 10px 20px 20px 20px;
+}
+
+#btnReset, #btnVerRanking {
+    flex: 1;
+    background: #ff9900;
+    border: 5px outset #ffcc66;
+    font-family: 'Impact', 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#btnVerRanking {
+    background: #0066cc;
+    border-color: #3399ff;
+}
+
+#btnReset:active, #btnVerRanking:active {
+    border: 5px inset #aa6600;
+    transform: translate(3px, 3px);
+}
+
+.legenda {
+    background: #ffffcc;
+    border-left: 8px solid #ff3300;
+    padding: 12px;
+    margin: 10px 20px 5px 20px;
+    font-family: monospace;
+    font-size: 12px;
+    color: #330000;
+    line-height: 1.6;
+}
+
+footer {
+    background: #000000aa;
+    text-align: center;
+    font-size: 10px;
+    padding: 8px;
+    color: #cccccc;
+    font-family: monospace;
+    border-top: 2px solid #ffaa00;
+    margin-top: 10px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #ece9d8;
+    padding: 30px;
+    border: 6px ridge #ffaa00;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content h2 {
+    color: #ff3300;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 3px inset #808080;
+    margin-bottom: 20px;
+    font-family: monospace;
+}
+
+.modal-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-botoes button {
+    flex: 1;
+    padding: 10px;
+    font-family: 'Impact', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    border: 3px outset #ffffff;
+}
+
+#btnSalvarRanking {
+    background: #48bb78;
+}
+
+#btnCancelarRanking {
+    background: #cccccc;
+}
+
+.modal-botoes button:active {
+    border: 3px inset #808080;
+    transform: translate(2px, 2px);
+}
+
+/* Ranking page */
+.ranking-controls {
+    display: flex;
+    gap: 15px;
+    margin: 20px;
+}
+
+.ranking-controls button {
+    flex: 1;
+    background: #c0c0c0;
+    border: 4px outset #ffffff;
+    font-family: 'Impact', monospace;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.ranking-controls button:active {
+    border: 4px inset #808080;
+    transform: translate(2px, 2px);
+}
+
+.loading-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #ff9900;
+    background: #1e1e1e;
+    margin: 20px;
+}
+
+.tabela-ranking {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace;
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+.tabela-ranking th {
+    background: #555555;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 3px solid #ffaa00;
+}
+
+.tabela-ranking td {
+    background: #1e1e1e;
+    color: #b0ffb0;
+    padding: 10px;
+    border-bottom: 1px dotted #ffaa55;
+}
+
+.tabela-ranking tr:nth-child(1) td {
+    background: #3a2a00;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.tabela-ranking tr:nth-child(2) td {
+    background: #2a2a1a;
+}
+
+.tabela-ranking tr:nth-child(3) td {
+    background: #1e1e1e;
+}
+
+.ranking-stats {
+    background: #000000;
+    color: #ffcc66;
+    padding: 10px;
+    margin: 0px 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.erro-ranking {
+    background: #ffcccc;
+    color: #cc0000;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-left: 6px solid #cc0000;
+}

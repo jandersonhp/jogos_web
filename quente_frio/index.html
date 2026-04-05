@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 QUENTE & FRIO - CATEGORIAS 🔥</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q25 35 25 55 Q25 75 50 90 Q75 75 75 55 Q75 35 50 10Z' fill='%23ef4444'/%3E%3Cpath d='M50 30 Q40 45 40 55 Q40 68 50 78 Q60 68 60 55 Q60 45 50 30Z' fill='%23f59e0b'/%3E%3Cpath d='M50 48 Q46 54 46 58 Q46 65 50 68 Q54 65 54 58 Q54 54 50 48Z' fill='%23fbbf24'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🔥 QUENTE & FRIO 🔥</h1>
+            <p>★ CATEGORIAS + LETRAS ★</p>
+        </div>
+
+        <div class="categoria-info" id="categoriaInfo">
+            <span class="label">📁 CATEGORIA SECRETA:</span>
+            <span class="valor" id="categoriaSecretaDisplay">???</span>
+        </div>
+
+        <div class="palpite-area">
+            <label class="palpite-label">DIGITE SEU PALPITE (Sem acento):</label>
+            <div class="input-group">
+                <input type="text" id="palpiteInput" placeholder="ex: brigadeiro" autocomplete="off">
+                <button id="btnChutar">CHUTAR</button>
+            </div>
+            <div id="ultimoChuteMsg" class="ultimo-chute-msg"></div>
+            <div id="errorMsg" class="error-message"></div>
+        </div>
+
+        <div class="feedback-panel" id="feedbackPanel">
+            <div id="tempIcon">❄️❄️❄️</div>
+            <div class="feedback-message" id="tempMsg">⚡ AGUARDANDO PRIMEIRO CHUTE ⚡</div>
+            <div class="detalhes-temp" id="detalhesTemp"></div>
+        </div>
+
+        <div id="dicaArea" class="dica-area" style="display: none;">
+            💡 <span id="dicaTexto"></span>
+        </div>
+
+        <div class="historico-area">
+            <h3>📜 HISTÓRICO DE CHUTES (MAIS QUENTES NO TOPO) 📜</h3>
+            <table class="tabela-historico" id="historicoTabela">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>PALPITE</th>
+                        <th>CATEGORIA</th>
+                        <th>SCORE</th>
+                        <th>TEMP</th>
+                    </tr>
+                </thead>
+                <tbody id="historicoBody">
+                    <tr><td colspan="5" style="text-align:center;">-- NENHUM CHUTE AINDA --</td</tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="botoes-area">
+            <button id="btnReset">🔄 NOVA PARTIDA 🔄</button>
+            <button id="btnVerRanking">🏆 VER RANKING 🏆</button>
+        </div>
+
+        <div class="legenda">
+            <strong>🔥 COMO FUNCIONA A TEMPERATURA:</strong><br>
+            ✅ Mesma categoria = esquenta MUITO (até 40 pontos)<br>
+            ✅ Mesmo número de letras = esquenta<br>
+            ✅ Letras iguais na mesma posição = esquenta mais ainda<br>
+            ❌ Categoria diferente = esfria<br>
+            <strong>📊 SCORE 0-100 | Acima de 80 = FERVENDO!</strong>
+        </div>
+        <footer>
+            ⏣ HOT & COLD - EDIÇÃO CATEGORIAS ⏣
+        </footer>
+    </div>
+
+    <!-- Modal para inserir nome após vencer -->
+    <div id="modalRanking" class="modal">
+        <div class="modal-content">
+            <h2>🏆 VOCÊ VENCEU! 🏆</h2>
+            <p>Você acertou em <strong id="modalTentativas">0</strong> tentativas!</p>
+            <label for="nomeJogador">Digite seu nome para entrar no ranking:</label>
+            <input type="text" id="nomeJogador" placeholder="Seu nome" maxlength="20">
+            <div class="modal-botoes">
+                <button id="btnSalvarRanking">💾 SALVAR NO RANKING</button>
+                <button id="btnCancelarRanking">❌ PULAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
